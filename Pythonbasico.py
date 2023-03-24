@@ -63,6 +63,43 @@ if 10>5;
 for i in list:
     print(i)
     print("ok")
-if
+if 10>5:
+        print ("diez es mayor que cinco")
+        print("otra indentación")
+for i in list:
+        print(i)
+        print("ok")
+if 10>5:
+        print("verdadero")
+        if 10<20:
+            print("verdadero")
+if 10<20:
+        print("verdadero")
+elif 5>3: #comienza segundo condicional
+        print("esto no se imprimirá)
+              else:
+              print("aquí nunca llega")
+#==============
+  FUNCIONES
+#==============
+
+def say_hello(name):
+              print("Hello ", name)
+              print("Welcome to Python Tutorials")
+              
+say hello("Julián")
+              
+              
+#=====================================================
+# Input permite obtener datos del usuario en prompter
+#=====================================================
+nombre = input("Dame tu nombre: ")
+              print("Hola como estás", nombre)
+              
+#=========================================
+# Los enteros son de precisión ilimitada
+#=========================================         
+              
+
 
 
