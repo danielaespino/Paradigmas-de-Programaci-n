@@ -76,7 +76,7 @@ if 10>5:
 if 10<20:
         print("verdadero")
 elif 5>3: #comienza segundo condicional
-        print("esto no se imprimirá)
+        print("esto no se imprimirá")
               else:
               print("aquí nunca llega")
 #==============
@@ -128,5 +128,76 @@ print(y)
 y = float("14.3")
 print(y)
               
-#======================================================================
-# Los complejos se escriben con la raíz de menos uno              
+#=====================================================
+# Los complejos se escriben con la raíz de menos uno  
+# j siempre con un número como prefijo
+# no acepta la j suelta
+#=====================================================
+z = 1+1j
+
+# suma +
+# resta -
+# multiplicación *
+# división /
+# modulo %
+# exponente **
+# // función piso
+# Funciones para transformar números int() float() complex()
+# Operaciones abs() round() pow()
+
+print(round(3.14159,4))
+
+#==========================
+# Strings de varias líneas
+#==========================
+parrafo = """ En el bosque de la china
+              la chinita se perdió """
+print(parrafo)
+
+#===============================================
+# La función len() obtiene el tamaño del string
+#===============================================
+n=len(parrafo)
+print(n)
+
+#=============================================================
+# Las letras en un string ocupan lugares como en un arreglo
+# (también de atrás para adelante comenzando en -1 el último)
+#=============================================================
+palabra = "hola"
+print(palabra[0])
+print(palabra[-4])
+
+#=======================
+#  Conjunto en python
+#=======================
+even_nums ={2, 4, 6 , 8, 10} # conjunto de números paresw
+print(even_nums)
+
+# El bool no es parte del conjunto
+emp = {1, 'Steve', 10.5, True} # conjunto de diferentes objetos
+print(emp)
+
+nums = {1, 2, 2, 3, 4, 4, 5, 5}
+print(nums)
+
+#===================================
+# Convertir secuencia a conjunto
+# No lo genera en orden
+#===================================
+s = set('Hello')
+print(s)
+s = set((1,2,3,4,5)) # tupla a conjunto
+print(s)
+
+#===============================================
+# De diccionario a conjunto: conjunto de llaves
+#===============================================
+d = {1:'One', 2: 'Two'}
+s = set(d)
+print(s)
+
+s.add(100)
+print(s)
+
+
