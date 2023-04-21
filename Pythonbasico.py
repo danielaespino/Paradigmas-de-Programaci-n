@@ -75,26 +75,27 @@ if 10>5:
             print("verdadero")
 if 10<20:
         print("verdadero")
-elif 5>3: #comienza segundo condicional
-        print("esto no se imprimirá")
-              else:
-              print("aquí nunca llega")
+elif 5>3: # comienza segundo condicional
+   print("esto no se imprimirá")
+else:
+   print("aquí nunca llega")
+
 #==============
-  FUNCIONES
+#  FUNCIONES
 #==============
 
 def say_hello(name):
               print("Hello ", name)
               print("Welcome to Python Tutorials")
               
-say hello("Julián")
+say_hello("Julián")
               
               
 #=====================================================
 # Input permite obtener datos del usuario en prompter
 #=====================================================
 nombre = input("Dame tu nombre: ")
-              print("Hola como estás", nombre)
+print("Hola como estás",nombre)
               
 #=========================================
 # Los enteros son de precisión ilimitada
@@ -334,7 +335,7 @@ print(L1+L2)
 # Llenado a mano
 #=================
 potencial = []
-for i in range(0,10000)
+for i in range(0,10000):
     potencial.append(float(i))
 print(potencial[100])
 
@@ -419,7 +420,7 @@ while num < 5:
 # Bucle sobre lista
 #*******************
 nums = [10, 20, 30, 40, 50]
-for i in nums:+
+for i in nums:
     print(i)
 
 #*************************
@@ -510,7 +511,7 @@ def muchos_saludos(*nombre):
     print("Hola ", end = " ")
     while len(nopmbres) > i:
         # Último nombre
-        if (i==len(nombres) > i:
+        if (i==len(nombres)-1):
              print(nombres[i])
         else:
         # Cualquier otro nombre
@@ -812,5 +813,85 @@ class A:
         self.a = a
         self.b = b
         self.c = c
+
+#======================================
+# La clase B tiene dos números reales
+#======================================
+class B:
+    _d:float=0.0
+    _e:float=0.0
+
+    def _init_(self,d:float,e:float):
+        self.d = d
+        self.e = e
+
+
+    #=========================================
+    # Método sumar todo (internos + externos)
+    #=========================================
+    def sumar_todo(self, aa:float, bb:float):
+        x:float=self.d+self.e+aa+bb
+        return x
+
+#============
+# ASOCIACIÓN
+#============
+#Usando objetos independientes
+objetoA = A(1.0,2.0,3.0)
+objetoB = B(4.0,5.0)
+print(objetoB.sumar_todo(objetoA.a,objetosA.b))
+
+
+#============================================
+# El objeto C tiene dos reales y un objeto A
+# El objeto A se ibstancia dentro de C
+#============================================
+class C:
+    _d:float=0.0
+    _e:float=0.0
+    _Aa:A=None
+
+    def _init_(self,d:float,e:float):
+        self.d = d
+        self.e = e
+        # A está instanciado adentro
+        self.Aa = A(1.0,2.0,3.0)
+
+    def sumar_todo(self):
+        X:float=self.d+self.Aa.a+self.Aa.b
+        return x
+
+#==============================
+# COMPOSICIÓN
+# Contiene otro objeto dentro
+#==============================
+objetoC =(4.0,5.0)
+print(objetoC.sumar_todo())
+
+#===========================================
+# Objeto D tiene dos reales y un objeto A
+# definido por fuera
+#===========================================
+class D:
+    _d:float=0.0
+    _e:float=0.0
+    _Aa:A=None
+    
+
+    def _init_(Self,d:float,e:float,Aa:A):
+        self.d = d
+        self.e = e
+        self.Aa = Aa
+
+    def sumar_todo(self):
+        x:float=Self.d+self.e+self.Aa.a+self.Aa.b
+        return x
+
+#========================================
+# AGREGACIÓN
+# Construye el objeto agregado ṕor fuera
+#========================================
+objetoD = D(4.0,5.0.objetoA)
+print(objetoD.sumar_todo())
 
 
