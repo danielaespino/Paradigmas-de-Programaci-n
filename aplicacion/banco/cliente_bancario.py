@@ -50,8 +50,8 @@ class ClienteBancario:
         self.__enviarBalanceAlBanco(cantidad)
 
     def retirarDinero(self, cantidad:float) -> None:
-        cantidadFInal = self.__balanceDeCuenta - cantidad
+        cantidadFinal = self.__balanceDeCuenta - cantidad
         self.__validarCantidad(cantidadFinal)
         self.__balanceDeCuenta = cantidadFinal
         self.__mandarEmail("----retirando dinero----", " se retiró " + str(cantidad))
-        self._enviarBalanceALBanco(cantidad)
+        self.__enviarBalanceALBanco(cantidad)
