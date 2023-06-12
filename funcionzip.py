@@ -14,7 +14,7 @@ una_lista = ["a", "b", "c", "b", "d", "m", "n", "n"]
 duplicados = set([x for x in una_lista if una_lista.count(x) > 1])
 print(duplicados)
 
-#Expresión generadora
+#Expresion generadora
 cuadrados = (x*x for x in range(5))
 print(next(cuadrados))
 print(next(cuadrados))
