@@ -9,8 +9,8 @@ rank = comm.Get_rank()
 n = 40
 x = range(n)
 m = int(math.ceil(float(len(x)) / size))
-x_chunck = list(x[rank*m:(rank+1)*m])
-r_chunck = list(map(math.sqrt, x_chunck))
+x_chunk = list(x[rank*m:(rank+1)*m])
+r_chunk = list(map(math.sqrt, x_chunk))
 
 #======================================
 # Una sola lista de todos los datos
@@ -25,7 +25,7 @@ rr = comm.allgather(r_chunk)
 #================================
 # Una matriz con todos los datos
 #================================
-rrr = comm.gather(r_chunk,root=1)
+rrr = comm.gather(r_chunk, root=0)
 
 if rank == 0:
     print(r)

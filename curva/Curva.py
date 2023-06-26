@@ -83,13 +83,13 @@ class Curva:
         #=========================
         # Interpolación lineal C0
         #=========================
-        if p ==0:
+        if p == 0:
            ip1:np.int32 = i+1
            if i == s.n-1:
               ip1 = 0
            xi.append(a*s.x[ip1] + (1.0-a)*s.x[i])
            for j in range(1,s.dim):
-               xi.append(a*S.x[ip1+j*s.n]+(1.0-a)*s.x[i+j*s.n])
+               xi.append(a*s.x[ip1+j*s.n]+(1.0-a)*s.x[i+j*s.n])
 
 
         #=========================
@@ -103,18 +103,18 @@ class Curva:
            ip2 = 1
        if i == s.n-2:
            ip2 = 0
-        im1:np.int32 = i-1
-        if i == 0:
+       im1:np.int32 = i-1
+       if i == 0:
             im1 = s.n-1
-        am1:np.float64 = a+1.0
-        ap1:np.float64 = 1.0-a
-        ap2:np.float64 = 2.0-a
-        z:np.float64 = 1.0 - 2.5*a*a + 1.5*a*a*a
-        zp1:np.float64 = 1.0 -2.5*ap1*ap1 + 1.5*ap1*ap1*ap1
-        zp2:np.float64 = 0.5*(2.0-ap2)*(2.0-ap2)*(1.0-ap2)
-        zm1:np.float64 = 0.5*(2.0-am1)*(2.0-am1)*(1.0-am1)
-        xi.append(zp1*s.x[ip1]+z*s.x[i]+zp2*s.x[im1])
-        for j in range(1,s.dim):
+       am1:np.float64 = a+1.0
+       ap1:np.float64 = 1.0-a
+       ap2:np.float64 = 2.0-a
+       z:np.float64 = 1.0 - 2.5*a*a + 1.5*a*a*a
+       zp1:np.float64 = 1.0 - 2.5*ap1*ap1 + 1.5*ap1*ap1*ap1
+       zp2:np.float64 = 0.5*(2.0-ap2)*(2.0-ap2)*(1.0-ap2)
+       zm1:np.float64 = 0.5*(2.0-am1)*(2.0-am1)*(1.0-am1)
+       xi.append(zp1*s.x[ip1]+z*s.x[i]+zp2*s.x[im1])
+       for j in range(1,s.dim):
            xi.append(zp1*s.x[ip1+j*s.n]+z*s.x[i+j*s.n]+zp2*s.x[ip2+j*s.n]+zm1*s.x[im1+j*s.n])
 
         #===========================
@@ -124,7 +124,7 @@ class Curva:
            ip1:np.int32 = i+1
            ip2:np.int32 = i+2
            ip3:np.int32 = i+3
-           if i ==s.n-1:
+           if i == s.n-1:
                ip1 = 0
                ip2 = 1
                ip3 = 2
@@ -137,10 +137,10 @@ class Curva:
             im2:np.int32 = i-2
             if i == 0:
                 im1 = s.n-1
-                im2 = s.no-2
+                im2 = s.n-2
             if i == 1:
                 im2 = s.n-1
-            i12:np.float64 = 1.0/12.0
+            u12:np.float64 = 1.0/12.0
             am1:np.float64 = a+1.0
             am2:np.float64 = a+2.0
             ap1:np.float64 = 1.0-a

@@ -36,7 +36,7 @@ def evolucion(u,n_0,n_1,udx2_0,udx2_!,dt,kd.i):
     unueva = u[i] + dt*kd*laplaciano
     return unueva
 
-evoluvion_gpu = cuda.jit(device=True)(evolucion)
+evolucion_gpu = cuda.jit(device=True)(evolucion)
 
 @cuda.jit
 def solucion_kernel(u_d,un_d,udx2_0,udx2_1,dt,n_0,n_1,kd):

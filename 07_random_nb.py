@@ -2,7 +2,7 @@
 # Forma compacta de random_nb
 #=============================
 import numpy
-form mpi4py import MPI
+from mpi4py import MPI
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 
